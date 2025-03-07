@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1741365729617" clover="3.2.0">
+  <project timestamp="1741365729617" name="All files">
+    <metrics statements="15" coveredstatements="14" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="3" elements="28" coveredelements="25" complexity="0" loc="15" ncloc="15" packages="3" files="3" classes="3"/>
+    <package name="01-hello-world">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="hello-world.js" path="C:\Users\boran\OneDrive\Документи\GitHub\homeworks\01-basic-challenges-1\01-hello-world\hello-world.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="02-get-sum">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="get-sum.js" path="C:\Users\boran\OneDrive\Документи\GitHub\homeworks\01-basic-challenges-1\02-get-sum\get-sum.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="03-calculator">
+      <metrics statements="11" coveredstatements="10" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <file name="calculator.js" path="C:\Users\boran\OneDrive\Документи\GitHub\homeworks\01-basic-challenges-1\03-calculator\calculator.js">
+        <metrics statements="11" coveredstatements="10" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

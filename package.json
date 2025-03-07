@@ -4,7 +4,7 @@
   "description": "100 JavaScript challenges for you to solve",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "Brad Traversy",
   "license": "MIT",
