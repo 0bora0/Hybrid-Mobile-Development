@@ -1,14 +1,10 @@
-function resultDDS() {
-    document.getElementById("result").addEventListener("click", () => {
-         let input = document.getElementById("priceInput").value.split(",");
-        console.log(input)
-         
- 
-     });
- }
- 
- var x = 12;
- var y = 8;
- var res=eval("x+y")
- console.log(res)
- 
+function resultDDS(pricesArray) {
+    const total = pricesArray.reduce((sum, price) => sum + parseFloat(price) || 0, 0);
+    const vat = total * 0.20;
+    const finalAmount = total + vat;
+    console.log(`Сума: ${total.toFixed(2)} лв.`);
+    console.log(`ДДС (20%): ${vat.toFixed(2)} лв.`);
+    console.log(`Крайно салдо: ${finalAmount.toFixed(2)} лв.`);
+}
+
+ console.log(resultDDS(["10", "20.5", "30", "40", "50"]));
