@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camera</title>
+    <script src="cordova.js"></script>
+    <script>
+        function takePhoto() {
+            navigator.camera.getPicture(function(imageURI) {
+                document.getElementById('photo').src = imageURI;
+            }, function(error) {
+                alert("Грешка: " + error);
+            }, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
+        }
+    </script>
+</head>
+<body>
+    <h1>Камера</h1>
+    <button onclick="takePhoto()">Снимай</button>
+    <img id="photo" style="width: 100%;" />
+    <button onclick="history.back()">Назад</button>
+    <button onclick="location.href='gps.html'">GPS</button>
+</body>
+</html>
