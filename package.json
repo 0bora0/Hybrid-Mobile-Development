@@ -10,5 +10,8 @@
   "license": "MIT",
   "devDependencies": {
     "jest": "^29.6.1"
+  },
+  "dependencies": {
+    "onsenui": "^2.12.8"
   }
 }
