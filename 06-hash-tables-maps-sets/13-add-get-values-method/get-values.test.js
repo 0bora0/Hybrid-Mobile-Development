@@ -13,6 +13,7 @@ describe('HashTable', () => {
     hashTable.set('city', 'New York');
 
     const values = hashTable.getValues();
+    console.log(values);  // This will print the values in the console
     expect(values).toEqual(expect.arrayContaining(['Alice', 30, 'New York']));
     expect(values).toHaveLength(3);
   });
@@ -22,3 +23,4 @@ describe('HashTable', () => {
     expect(values).toEqual([]);
   });
 });
+

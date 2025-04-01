@@ -1,5 +1,5 @@
 const anagramGrouping = require('./custom-anagram-grouping');
-
+const HashTable = require('./HashTable');
 describe('Anagram Grouping', () => {
   test('Grouping anagrams', () => {
     const words = [

@@ -103,82 +103,100 @@
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">function calculateTotalSalesWithTax(products, taxRate) {
-  // Check if taxRate is a valid number
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof taxRate !== 'number' || isNaN(taxRate)) {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof taxRate !== "number" || isNaN(taxRate)) {
 <span class="cstat-no" title="statement not covered" >    console.error("Invalid tax rate:", taxRate);</span>
 <span class="cstat-no" title="statement not covered" >    return NaN;</span>
   }
 &nbsp;
-  // Check if products is an array and contains valid product objects
   <span class="missing-if-branch" title="if path not taken" >I</span>if (!Array.isArray(products)) {
 <span class="cstat-no" title="statement not covered" >    console.error("Invalid products array:", products);</span>
 <span class="cstat-no" title="statement not covered" >    return NaN;</span>
   }
 &nbsp;
   const totalSales = products.reduce((acc, product) =&gt; {
-    // Validate product properties
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof product.price !== 'number' || typeof product.quantity !== 'number') {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (
+      typeof product.price !== "number" ||
+      typeof product.quantity !== "number"
+    ) {
 <span class="cstat-no" title="statement not covered" >      console.error("Invalid product data:", product);</span>
-<span class="cstat-no" title="statement not covered" >      return acc; </span>// Skip invalid product data
+<span class="cstat-no" title="statement not covered" >      return acc;</span>
     }
 &nbsp;
     const productTotal = product.price * product.quantity;
-    console.log(`Product: ${product.name}, Price: ${product.price}, Quantity: ${product.quantity}, Product Total: ${productTotal}`);
+    console.log(
+      `Product: ${product.name}, Price: ${product.price}, Quantity: ${product.quantity}, Product Total: ${productTotal}`
+    );
 &nbsp;
     return acc + productTotal;
   }, 0);
 &nbsp;
   <span class="missing-if-branch" title="if path not taken" >I</span>if (totalSales === 0) {
-<span class="cstat-no" title="statement not covered" >    console.error("Total sales calculated as 0, which might indicate invalid or missing data.");</span>
+<span class="cstat-no" title="statement not covered" >    console.error(</span>
+      "Total sales calculated as 0, which might indicate invalid or missing data."
+    );
 <span class="cstat-no" title="statement not covered" >    return NaN;</span>
   }
 &nbsp;
   const taxAmount = (totalSales * taxRate) / 100;
   const totalSalesWithTax = totalSales + taxAmount;
 &nbsp;
-  console.log(`Tax Amount: ${taxAmount}, Total Sales With Tax: ${totalSalesWithTax}`);
-  
+  console.log(
+    `Tax Amount: ${taxAmount}, Total Sales With Tax: ${totalSalesWithTax}`
+  );
+&nbsp;
   return totalSalesWithTax;
 }
 &nbsp;
@@ -190,7 +208,7 @@ module.exports = calculateTotalSalesWithTax;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-04-01T18:16:25.568Z
+                at 2025-04-01T19:48:13.111Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
