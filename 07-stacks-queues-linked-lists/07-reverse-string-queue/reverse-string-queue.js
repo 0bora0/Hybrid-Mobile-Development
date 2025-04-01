@@ -1,17 +1,15 @@
-const Queue = require("./queue");
+const Queue = require('./queue');
 
-function reverseStringWithQueue(str) {
+const reverseStringWithQueue = () => {
   const queue = new Queue();
-  let reversedString = "";
-
-  for (let i = 0; i < str.length; i++) {
+  for (let i = str.length - 1; i >= 0; i--) {
     queue.enqueue(str[i]);
   }
+  let reversedString = '';
   while (!queue.isEmpty()) {
     reversedString += queue.dequeue();
   }
-
   return reversedString;
-}
+};
 
 module.exports = reverseStringWithQueue;

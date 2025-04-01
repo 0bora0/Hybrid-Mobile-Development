@@ -1,18 +1,20 @@
-const Queue = require("./queue");
-const Stack = require("./stack");
+const Queue = require('./queue');
+const Stack = require('./stack');
+
 function isPalindromeQueueStack(str) {
-  const queue = new Queue();
-  const stack = new Stack();
-  for (let i = 0; i < str.length; i++) {
-    queue.enqueue(str[i]);
-    stack.push(str[i]);
+  const formattedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  const charQueue = new Queue();
+  const charStack = new Stack();
+  for (let i = 0; i < formattedStr.length; i++) {
+    const char = formattedStr.charAt(i);
+    charQueue.enqueue(char);
+    charStack.push(char);
   }
-  while (!queue.isEmpty()) {
-    if (queue.dequeue() !== stack.pop()) {
+  while (!charQueue.isEmpty()) {
+    if (charQueue.dequeue() !== charStack.pop()) {
       return false;
     }
   }
-
   return true;
 }
 
