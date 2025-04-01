@@ -1,3 +1,10 @@
-function formatPhoneNumber() {}
+function formatPhoneNumber(numbers) {
+              if (numbers.length !== 10) {
+                throw new Error("Array must contain exactly 10 digits.");
+              }
+              const formattedNumber = `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
+            
+              return formattedNumber;
+            }
 
 module.exports = formatPhoneNumber;

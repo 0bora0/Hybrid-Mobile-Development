@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Library</title>
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
-<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.css" />
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.css" />
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   </head>
   <body>
+    <!-- OnsenUI Navigator -->
     <ons-navigator id="navigator" swipeable></ons-navigator>
+
+    <!-- Страница с книги -->
     <ons-page id="booksPage">
       <ons-toolbar>
         <div class="center">Books</div>
       </ons-toolbar>
       <ons-list id="bookList"></ons-list>
-      <ons-fab onclick="navigator.pushPage('createBookPage.html')">+</ons-fab>
+      <div id="userEmailDisplay"></div>
+      <ons-fab onclick="goToCreateBookPage()">+</ons-fab>
     </ons-page>
+
+    <!-- Страница за добавяне на нова книга -->
     <ons-page id="createBookPage">
       <ons-toolbar>
         <div class="center">Add New Book</div>
@@ -23,9 +30,11 @@
       <div style="padding: 20px">
         <input type="text" id="bookTitle" placeholder="Book Title" />
         <input type="text" id="bookAuthor" placeholder="Author" />
-        <button onclick="addBook()">Add Book</button>
+        <button id="addBook">Add Book</button>
       </div>
     </ons-page>
+
+    <!-- Страница за редактиране на книга -->
     <ons-page id="editBookPage">
       <ons-toolbar>
         <div class="center">Edit Book</div>
@@ -33,9 +42,11 @@
       <div style="padding: 20px">
         <input type="text" id="editBookTitle" />
         <input type="text" id="editBookAuthor" />
-        <button onclick="updateBook()">Save Changes</button>
+        <button id="updateBook">Save Changes</button>
       </div>
     </ons-page>
+
+    <!-- Страница за логин -->
     <ons-page id="loginPage">
       <ons-toolbar>
         <div class="center">Login</div>
@@ -43,13 +54,11 @@
       <div style="padding: 20px">
         <input type="email" id="loginEmail" placeholder="Email" />
         <input type="password" id="loginPassword" placeholder="Password" />
-        <button onclick="login()">Login</button>
-        <button onclick="navigator.pushPage('registerPage.html')">
-          Register
-        </button>
+        <button id="login">Login</button>
       </div>
     </ons-page>
 
+    <!-- Страница за регистрация -->
     <ons-page id="registerPage">
       <ons-toolbar>
         <div class="center">Register</div>
@@ -57,11 +66,12 @@
       <div style="padding: 20px">
         <input type="email" id="registerEmail" placeholder="Email" />
         <input type="password" id="registerPassword" placeholder="Password" />
-        <button onclick="register()">Register</button>
+        <button id="register">Register</button>
+        <!-- Линк за навигация към страницата за логин -->
+        <button id="goToLoginButton">Go to Login</button>
       </div>
     </ons-page>
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
     <script defer src="firebase-config.js" type="module"></script>
     <script defer src="app.js" type="module"></script>
   </body>
